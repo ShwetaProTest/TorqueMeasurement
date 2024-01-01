@@ -1,7 +1,7 @@
 import os
 import openpyxl
 
-base_path = r"C:\torquecomparisonproducts"
+base_path = r"C:\Users\Shweta\PycharmProjects\torquecomparisonproducts"
 
 # Get only the first-level subdirectories under base_path
 subdirectories = [d for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))]

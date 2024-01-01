@@ -1,0 +1,20 @@
+Torque measurement analysis and visualization tool:
+
+As a test engineer I perform the testing and measurement of electric motors. The measurement data needs to be analysed after the test.
+There are several criterias set to charaterize the electric motors tested.
+
+To characterise the product, every product measured should be processed with the same tool to have common reference.
+
+For this purpose a software tool needs to be developed which charaterises the motor based on the definitions set by the test engineer.
+
+Requirement:
+
+Phase 1: (Torque analysis tool)
+I need a measurement tool to be developed to analyse and calculated several parameters of the measurment such as Maximum, Minimum, Average, errors, interesting regions/bands.
+These parameters will be defined by the test manager.
+
+Phase 2: (Torque comparison tool)
+The tool should provide and option/feature to compare results of several measurements and its results calculated.
+
+Phase 3: (Web application development - Integrating analysis and comparison tool and adding several other features)
+Development of Data flow/ data management system to handle the regular measurement data and upgrade to the tool as needed to the test engineers.  

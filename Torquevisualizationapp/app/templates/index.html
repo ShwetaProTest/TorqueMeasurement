@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="selection selection-box">
+        <div id="loading">Loading data...</div>
+        <div class="inline-control">
+            <label class="bold-label" for="folder">Product:</label>
+            <select name="folder" id="folder" onchange="loadFiles()">
+                <option value="">-- Select Product --</option>
+                {% for folder in folders %}
+                    <option value="{{ folder }}">{{ folder }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="inline-control">
+            <label class="bold-label" for="direction">Direction:</label>
+            <select id="direction" onchange="loadFiles()">
+                <option value="">-- Select Direction --</option>
+                <option value="CW">Clockwise</option>
+                <option value="ACW">Anti-Clockwise</option>
+                <option value="Sweep">Sweep</option>
+                <option value="Behavior">Behavior</option>
+            </select>
+        </div>
+
+        <div class="inline-control">
+            <label class="bold-label" for="fileSelect">Measurement Data:</label>
+            <select id="fileSelect">
+                <option value="">-- Select File --</option>
+                <!-- Options will be dynamically populated -->
+            </select>
+        </div>
+
+        <div class="add-comparison-button">
+            <button type="button" onclick="addFileToComparison()">Add data</button>
+        </div>
+
+        <div class="comparison-label-wrapper">
+            <strong>Selected files:</strong>
+            <ul id="displaySelectedFilesList"></ul>
+        </div>
+        <button type="button" class="centered-button" onclick="viewPlot()">View Plot</button>
+    </div>
+{% endblock %}

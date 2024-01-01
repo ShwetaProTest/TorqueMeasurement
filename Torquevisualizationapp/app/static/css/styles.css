@@ -1,0 +1,265 @@
+/* main.css */
+
+body, h1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1, p.description {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.right-side {
+    position: relative;
+    height: 100vh; 
+}
+
+label {
+    display: block;  
+    margin-bottom: 5px; 
+}
+
+.bold-label {
+    font-weight: bold; 
+}
+
+button[type='button'], .remove-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-left: 10px;
+}
+
+button[type='button'] {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+button:hover, .remove-button:hover {
+    background-color: #0056b3;
+}
+
+.remove-button {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+.divider, .row-divider {
+    background-color: #c6c4c4;
+    flex-shrink: 0; /* Prevents the divider from shrinking */
+}
+
+.divider {
+    width: 6px;
+    cursor: ew-resize;
+    z-index: 1001; /* Ensure the divider stays on top of other elements */
+}
+
+.row-divider {
+    height: 4px;
+    width: 100%;
+    cursor: ns-resize;
+}
+
+.selection {
+    flex-basis: 25%;
+    padding: 20px;
+    height: 100%;
+    border-right: 1px solid #c6c4c4;
+}
+
+.plot {
+    display: flex;
+    flex-direction: column;  /* This will stack the children (graph and table) vertically */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.plot, .table {
+    height: 50%;
+    overflow: auto;
+}
+
+#divider {
+    height: 10px;
+    background-color: #333;
+    cursor: ns-resize;
+    z-index: 1001; /* Ensure the divider stays on top of other elements */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+#displaySelectedFilesList li {
+    font-size: 0.8em;
+}
+
+#folder, #fileSelect {
+    font-size: 0.9em;
+}
+
+#loading {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 24px;
+    color: #333;
+    z-index: 1000;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+}
+
+.inline-control, .add-comparison-button, .comparison-label-wrapper {
+    margin-bottom: 20px;
+}
+
+
+#sheet2Data {
+    flex: 0.25;  /* Takes 25% of the vertical space in .plot */
+    overflow: auto;  /* If there's more data than space allows */
+    width: 100%;
+}
+
+#sheet2Data h3 {
+    width: 100%;      
+    font-size: 0.9em;
+    margin-top: 10px; 
+    text-align: center;
+}
+
+#sheet2Data table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 0 10px 10px 0; 
+    font-size: 0.8em;
+    border: 1px solid rgb(235, 220, 220);
+    background-color: #ffffff;
+}
+
+#sheet2Data th {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#sheet2Data td {
+    border: 1px solid black;
+    padding: 5px;
+    color: #000000;
+    cursor: pointer; 
+}
+
+#sheet2Data th:first-child {
+    color: black;
+    text-shadow: none;
+}
+
+#sheet2Data tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#sheet2Data tr:hover {
+    background-color: #e0e0e0;
+}
+
+.row-divider {
+    cursor: ns-resize;
+    background-color: #c6c4c4;
+    height: 4px;
+    width: 100%;
+}
+
+#logo {
+    position: absolute;
+    mix-blend-mode: multiply;
+    top: 0;     
+    right: 10px;   
+    width: 200px;      
+    height: 60px;   
+    z-index: 1000; 
+}
+
+#endorLogo {
+    position: absolute;
+    mix-blend-mode: multiply;
+    top: 0; 
+    left: 10px;  
+    width: 120px;   
+    height: 60px;
+    z-index: 1000;  
+}
+
+#plotDiv {
+    flex: 0.75;  
+    overflow-y: auto;  /* Allow vertical scrolling */
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+}
+
+.selection-box {
+    background-color: rgb(194, 204, 249);
+    padding: 20px;
+    border-radius: 10px; 
+    color: white; 
+}
+
+.centered-button {
+    display: block;
+    width: 200px;  
+    height: 50px;  
+    margin: 20px auto;  
+    font-size: 1.5em !important;  
+    line-height: 1.5em; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.adjustment-input {
+    width: 87px;
+    height: 7px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.remove-button {
+    background-color: #ff6666;
+    color: #fff;
+    cursor: pointer;
+}
+
+.download-btn {
+    position: absolute; /* This means the button will be positioned relative to the nearest parent element with a "relative" position. */
+    top: 10px; /* 10px from the top of .plot element */
+    right: 10px; /* 10px from the right of .plot element */
+    padding: 5px 10px; /* Smaller padding to make the button smaller */
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 2; /* Ensure the button stays on top of other elements */
+}
